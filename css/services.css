@@ -1,0 +1,181 @@
+/* ============================================================
+   SERVICES PAGE — services.css
+   ============================================================ */
+
+
+/* ── HERO ── */
+
+.services-hero {
+  padding: 200px var(--pad) 100px;
+  position: relative;
+}
+
+.services-hero-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.page-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fade-in 0.8s ease 0.1s forwards;
+}
+
+.services-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 9vw, 170px);
+  line-height: 0.88;
+  letter-spacing: 0.01em;
+  margin-bottom: 44px;
+  opacity: 0;
+  animation: fade-up 1s ease 0.2s both;
+}
+
+.services-hero h1 em { font-style: normal; color: var(--blue); }
+
+.services-hero-sub {
+  max-width: 600px;
+  opacity: 0;
+  animation: fade-up 0.9s ease 0.45s both;
+}
+
+
+/* ── SERVICE BLOCKS ── */
+
+.service-block {
+  display: grid;
+  grid-template-columns: 220px 1fr 260px;
+  gap: 56px;
+  align-items: start;
+  padding: 56px 0;
+  border-bottom: 1px solid var(--border);
+  transition: padding var(--t-med);
+}
+
+.service-block:first-of-type { border-top: 1px solid var(--border); }
+
+.service-block-num {
+  font-family: var(--font-display);
+  font-size: 90px;
+  line-height: 1;
+  color: var(--surface-3);
+  transition: color var(--t-med), -webkit-text-stroke var(--t-med);
+  -webkit-text-stroke: 1px transparent;
+}
+
+.service-block:hover .service-block-num {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--blue-border);
+}
+
+.service-block-name {
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+.service-block-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.78;
+  margin-bottom: 24px;
+}
+
+.service-block-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--blue);
+  transition: gap var(--t-fast);
+}
+
+.service-block-link:hover { gap: 14px; }
+
+.deliverables-title {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.deliverable-item {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  padding: 9px 0 9px 16px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  transition: color var(--t-fast);
+}
+
+.deliverable-item:last-child { border-bottom: none; }
+.deliverable-item:hover { color: var(--text); }
+
+.deliverable-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 18px;
+  width: 6px; height: 1px;
+  background: var(--blue);
+}
+
+
+/* ── PROCESS ── */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+  margin-top: 56px;
+}
+
+.process-step {
+  padding-top: 32px;
+  position: relative;
+}
+
+.process-step::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--border);
+  transition: background var(--t-med);
+}
+
+.process-step:hover::before { background: var(--blue); }
+
+.process-num {
+  font-family: var(--font-display);
+  font-size: 52px;
+  color: var(--blue);
+  opacity: 0.45;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.process-title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.process-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.68;
+}

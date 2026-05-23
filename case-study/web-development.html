@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Luminal — Website by Creativo Creates. Custom codebase, GSAP animations, PHP/JSON CMS." />
+  <title>Luminal — Website | Creativo</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/case-study.css" />
+  <link rel="stylesheet" href="../css/tablet-res.css" />
+  <link rel="stylesheet" href="../css/mobile-res.css" />
+</head>
+<body>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="noise-layer" aria-hidden="true"></div>
+  <div class="orb-container" aria-hidden="true">
+    <div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
+  </div>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="../index.html" class="nav-logo">Creativo<span>.</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="../index.html"    class="nav-link">Home</a></li>
+      <li><a href="../work.html"     class="nav-link">Work</a></li>
+      <li><a href="../about.html"    class="nav-link">About</a></li>
+      <li><a href="../services.html" class="nav-link">Services</a></li>
+      <li><a href="../contact.html"  class="nav-link">Contact</a></li>
+    </ul>
+    <a href="../contact.html" class="nav-cta">Let's Talk</a>
+    <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false"><i class="ri-menu-line"></i></button>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="mobile-close" aria-label="Close navigation menu"><i class="ri-close-line"></i></button>
+    <nav class="mobile-links">
+      <a href="../index.html"    class="mobile-link">Home</a>
+      <a href="../work.html"     class="mobile-link">Work</a>
+      <a href="../about.html"    class="mobile-link">About</a>
+      <a href="../services.html" class="mobile-link">Services</a>
+      <a href="../contact.html"  class="mobile-link">Contact</a>
+    </nav>
+    <div class="mobile-social">
+      <hr class="mobile-divider" />
+      <span class="mobile-social-label">Social</span>
+      <div class="mobile-social-icons">
+        <a href="https://instagram.com/creativocreates" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="mobile-social-icon"><i class="ri-instagram-line"></i></a>
+        <a href="https://behance.net/creativocreates"   target="_blank" rel="noopener noreferrer" aria-label="Behance"   class="mobile-social-icon"><i class="ri-behance-line"></i></a>
+        <a href="https://pinterest.com/creativocreates" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="mobile-social-icon"><i class="ri-pinterest-line"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-backdrop" aria-hidden="true"></div>
+
+  <main>
+
+    <!-- HERO: Full bleed — consistent with all case studies -->
+    <section class="cs-hero">
+      <div class="cs-hero-bg" style="background-image: url('https://picsum.photos/seed/luminal-hero/1600/900');"></div>
+      <div class="cs-hero-overlay"></div>
+      <div class="cs-hero-content">
+        <div class="cs-hero-meta"><span class="cs-category">Web Development</span></div>
+        <h1 class="cs-hero-title">Luminal<br />— Website</h1>
+      </div>
+    </section>
+
+    <!-- INFO BAR -->
+    <section class="cs-info-bar">
+      <div class="cs-info-bar-inner container">
+        <div class="cs-info-tag">
+          <span class="cs-info-label">Sector</span>
+          <span class="cs-info-value">Web Development</span>
+        </div>
+        <div class="cs-info-tag">
+          <span class="cs-info-label">What We Did</span>
+          <span class="cs-info-value">Creative Web Design &amp; UI · Web Development · SEO · CMS Integration</span>
+        </div>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary cs-case-btn">
+          <span>Visit Website</span><i class="ri-arrow-right-up-line"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <article class="cs-content">
+      <div class="container">
+        <div class="cs-text-block" data-reveal>
+          <p class="cs-lead">Luminal needed a website that matched the quality of their product — fast, intentional, and completely custom. Off-the-shelf templates weren't on the table. The brief was clear: build something that earns attention and keeps it.</p>
+          <p class="cs-body">The architecture was built on a custom HTML/CSS/JS codebase with a PHP/JSON headless CMS for content management. This gave the client full control over their content without locking them into a heavy platform. Performance was non-negotiable from the start.</p>
+        </div>
+        <div class="cs-image-block" data-reveal>
+          <img src="https://picsum.photos/seed/luminal-web-01/1400/800" alt="Luminal website homepage" loading="lazy" width="1400" height="800" />
+        </div>
+        <div class="cs-text-block" data-reveal>
+          <h2 class="cs-block-heading">Animation &amp; Motion</h2>
+          <p class="cs-body">GSAP ScrollTrigger drove all scroll-based animations — each section reveals with a purposeful transition that guides the eye without distracting from the content. The hero features a custom Three.js wireframe element that responds to mouse movement.</p>
+          <p class="cs-body">Every animation was performance-tested before shipping. No layout-triggering properties. No will-change abuse. Smooth 60fps on mid-range Android devices.</p>
+        </div>
+        <div class="cs-image-block" data-reveal>
+          <img src="https://picsum.photos/seed/luminal-web-02/1400/800" alt="Luminal website animation detail" loading="lazy" width="1400" height="800" />
+        </div>
+        <div class="cs-text-block" data-reveal>
+          <h2 class="cs-block-heading">Mobile &amp; Performance</h2>
+          <p class="cs-body">Mobile was designed first, not adapted last. Every breakpoint was considered as its own layout problem. The result is a site that feels native to whatever screen it's on — not a desktop site that was squished to fit a phone.</p>
+        </div>
+        <div class="cs-image-block" data-reveal>
+          <img src="https://picsum.photos/seed/luminal-web-03/1400/800" alt="Luminal website mobile view" loading="lazy" width="1400" height="800" />
+        </div>
+      </div>
+    </article>
+
+    <!-- CTA DIVIDER + BANNER -->
+    <div class="cta-divider" aria-hidden="true"></div>
+    <section class="cta-banner" aria-label="Call to Action">
+      <div class="container" style="position:relative;z-index:1;">
+        <div data-reveal>
+          <span class="t-label" style="display:block;margin-bottom:18px;">Need a Website Like This?</span>
+          <h2 class="t-hero">Let's build your<br />next web project.</h2>
+          <div class="cta-actions">
+            <a href="../contact.html" class="btn btn-primary"><span>Start a Web Project</span><i class="ri-arrow-right-line"></i></a>
+            <a href="../work.html"    class="btn btn-outline">View All Work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" aria-label="Site footer">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="footer-inner container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="footer-logo">Creativo<span>.</span></a>
+          <p class="footer-tagline">Brand Structuralist &amp; Video Editor</p>
+          <p class="footer-desc">Design that thinks. Work that lasts.<br />Based in Lagos, Nigeria.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/creativocreates" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer-social"><i class="ri-instagram-line"></i></a>
+            <a href="https://behance.net/creativocreates"   target="_blank" rel="noopener noreferrer" aria-label="Behance"   class="footer-social"><i class="ri-behance-line"></i></a>
+            <a href="https://pinterest.com/creativocreates" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="footer-social"><i class="ri-pinterest-line"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <nav class="footer-nav-links" aria-label="Footer navigation">
+            <a href="../index.html"    class="footer-nav-link">Home     <i class="ri-arrow-right-up-line"></i></a>
+            <a href="../work.html"     class="footer-nav-link">Work     <i class="ri-arrow-right-up-line"></i></a>
+            <a href="../about.html"    class="footer-nav-link">About    <i class="ri-arrow-right-up-line"></i></a>
+            <a href="../services.html" class="footer-nav-link">Services <i class="ri-arrow-right-up-line"></i></a>
+            <a href="../contact.html"  class="footer-nav-link">Contact  <i class="ri-arrow-right-up-line"></i></a>
+          </nav>
+        </div>
+        <div class="footer-contact-col">
+          <h4 class="footer-col-title">Get In Touch</h4>
+          <a href="mailto:hello@creativocreates.live" class="footer-contact-item"><i class="ri-mail-line"></i> hello@creativocreates.live</a>
+          <a href="https://wa.me/2348000000000" target="_blank" rel="noopener noreferrer" class="footer-contact-item"><i class="ri-whatsapp-line"></i> Chat on WhatsApp</a>
+          <a href="../contact.html" class="btn btn-primary footer-cta"><span>Start a Project</span><i class="ri-arrow-right-up-line"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© <span id="footerYear"></span> <span>Creativo Creates</span>. All Rights Reserved.</p>
+        <p class="footer-made">Designed &amp; Built by <em>Creativo</em></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-to-top" aria-label="Scroll to top"><i class="ri-arrow-up-line"></i></button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/animation.js" defer></script>
+  <script>document.getElementById('footerYear').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

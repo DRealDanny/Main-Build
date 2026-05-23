@@ -1,0 +1,170 @@
+/* ============================================================
+   TABLET RESPONSIVE — tablet-res.css
+   Breakpoint: max-width 1024px
+   ============================================================ */
+
+@media (max-width: 1024px) {
+
+  /* ── ROOT SPACING ── */
+  :root {
+    --section: 96px;
+    --pad:     44px;
+  }
+
+
+  /* ── NAVBAR ── */
+  .nav-cta    { display: none; }
+  .nav-links  { gap: 26px; }
+
+
+  /* ── LAYOUT ── */
+  .flex-between {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  /* ── HOME: HERO ── */
+  .hero {
+    height: auto;
+    min-height: 0;
+    padding-top: 180px;
+    padding-bottom: 100px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  #heroCanvas    { display: none; }
+  .hero-scroll   { display: none; }
+
+
+  /* ── HOME: WORK GRID — 2 cols on tablet ── */
+  .work-grid-home {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reset tall row 2 cards on tablet */
+  .work-grid-home .project-card:nth-child(n+4):nth-child(-n+6) .card-img {
+    aspect-ratio: 4/3;
+  }
+
+
+  /* ── HOME: ABOUT STRIP ── */
+  .about-strip {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+
+  /* ── HOME: SERVICES SNAP ── */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item { padding: 36px 28px; }
+
+
+  /* ── STATS BAR — 2×2 on tablet ── */
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+
+  /* ── ABOUT: TOOLS GRID ── */
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+
+  /* ── ABOUT: STORY ── */
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 52px;
+  }
+
+  .photo-wrap {
+    position: static;
+    max-width: 420px;
+  }
+
+
+  /* ── SERVICES: SERVICE BLOCKS ── */
+  .service-block {
+    grid-template-columns: 60px 1fr;
+    gap: 32px;
+  }
+
+  .service-block .service-deliverables {
+    grid-column: 2;
+  }
+
+  .service-block-num { font-size: 52px; }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+
+  /* ── CONTACT ── */
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 52px;
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+
+  /* ── FOOTER ── */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .footer-contact-col {
+    grid-column: 1 / -1;
+  }
+
+
+  /* ── CASE STUDY ── */
+  .cs-hero-split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .cs-hero-split-text {
+    padding: 160px var(--pad) 60px;
+  }
+
+  .cs-hero-split-image {
+    min-height: 50vh;
+  }
+
+  .cs-info-bar-inner { 
+    gap: 28px; 
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .cs-case-btn {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ── WORK PAGE ── */
+  .work-hero { padding: 160px var(--pad) 80px; }
+
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}

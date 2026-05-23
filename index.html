@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Creativo Creates — Brand Structuralist based in Lagos. Design systems and experiences that make brands impossible to ignore." />
+  <title>Creativo — Brand Structuralist</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/tablet-res.css" />
+  <link rel="stylesheet" href="css/mobile-res.css" />
+</head>
+<body>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="noise-layer" aria-hidden="true"></div>
+  <div class="orb-container" aria-hidden="true">
+    <div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
+  </div>
+
+  <nav class="nav" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">Creativo<span>.</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html"    class="nav-link">Home</a></li>
+      <li><a href="work.html"     class="nav-link">Work</a></li>
+      <li><a href="about.html"    class="nav-link">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="contact.html"  class="nav-link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Let's Talk</a>
+    <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false"><i class="ri-menu-line"></i></button>
+  </nav>
+
+  <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="mobile-close" aria-label="Close navigation menu"><i class="ri-close-line"></i></button>
+    <nav class="mobile-links">
+      <a href="index.html"    class="mobile-link">Home</a>
+      <a href="work.html"     class="mobile-link">Work</a>
+      <a href="about.html"    class="mobile-link">About</a>
+      <a href="services.html" class="mobile-link">Services</a>
+      <a href="contact.html"  class="mobile-link">Contact</a>
+    </nav>
+    <div class="mobile-social">
+      <hr class="mobile-divider" />
+      <span class="mobile-social-label">Social</span>
+      <div class="mobile-social-icons">
+        <a href="https://instagram.com/creativocreates" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="mobile-social-icon"><i class="ri-instagram-line"></i></a>
+        <a href="https://behance.net/creativocreates"   target="_blank" rel="noopener noreferrer" aria-label="Behance"   class="mobile-social-icon"><i class="ri-behance-line"></i></a>
+        <a href="https://pinterest.com/creativocreates" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="mobile-social-icon"><i class="ri-pinterest-line"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-backdrop" aria-hidden="true"></div>
+
+  <main style="overflow-x:hidden;">
+
+    <!-- ── HERO ── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-eyebrow">
+            <span class="hero-eyebrow-line" aria-hidden="true"></span>
+            <span class="t-label">Brand Structuralist</span>
+          </div>
+          <h1 class="hero-title" id="hero-heading">
+            <span class="hero-title-line">
+              <span class="hero-word"><span class="hero-word-inner">Design</span></span>
+              <span class="hero-word"><span class="hero-word-inner">&nbsp;that</span></span>
+            </span>
+            <span class="hero-title-line accent">
+              <span class="hero-word"><span class="hero-word-inner">Thinks.</span></span>
+            </span>
+            <span class="hero-title-line">
+              <span class="hero-word"><span class="hero-word-inner">Work</span></span>
+              <span class="hero-word"><span class="hero-word-inner">&nbsp;that</span></span>
+            </span>
+            <span class="hero-title-line">
+              <span class="hero-word"><span class="hero-word-inner">Lasts.</span></span>
+            </span>
+          </h1>
+          <p class="hero-subtitle">I design systems and build experiences that make brands impossible to ignore — from identity to interface, strategy to screen.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="openShowreel"><span>Watch Showreel</span><i class="ri-play-line"></i></button>
+            <a href="about.html" class="btn btn-outline">About Creativo</a>
+          </div>
+        </div>
+        <div id="heroCanvas" aria-hidden="true"></div>
+        <div class="hero-scroll" aria-hidden="true">
+          <div class="hero-scroll-indicator">
+            <div class="hero-scroll-line"></div>
+            <span>Scroll</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bottom-line" aria-hidden="true"></div>
+    </section>
+
+    <!-- ── MARQUEE ── -->
+    <div class="marquee-section" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-item"><span class="marquee-dot"></span>&nbsp;Branding</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>&nbsp;Web Development</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>&nbsp;Video Editing</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>&nbsp;Branding</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>&nbsp;Web Development</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>&nbsp;Video Editing</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>&nbsp;Branding</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>&nbsp;Web Development</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>&nbsp;Video Editing</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>&nbsp;Branding</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>&nbsp;Web Development</div>
+        <div class="marquee-item"><span class="marquee-dot"></span>&nbsp;Video Editing</div>
+      </div>
+    </div>
+
+    <!-- ── WORK GRID — uniform 3×3 ── -->
+    <section class="section" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" data-reveal><span class="t-label">Selected Work</span></div>
+          <div class="flex-between" data-reveal data-delay="2">
+            <h2 class="t-h1" id="work-heading">Work that earns<br />its place.</h2>
+            <a href="work.html" class="btn-arrow">View All Projects <i class="ri-arrow-right-up-line"></i></a>
+          </div>
+        </div>
+        <div class="work-grid-home">
+          <!-- Row 1 -->
+          <a href="case-study/branding.html" class="project-card" data-reveal>
+            <div class="card-img"><img src="https://picsum.photos/seed/apex-brand/800/600" alt="Apex Brand Identity" loading="lazy" width="800" height="600" /></div>
+            <div class="card-overlay"><h3 class="card-title">Apex — Brand Identity</h3><p class="card-sub">Visual system for a premium consulting firm</p></div>
+            <div class="card-view-btn" aria-hidden="true"><i class="ri-arrow-right-up-line"></i></div>
+          </a>
+          <a href="case-study/web-development.html" class="project-card" data-reveal data-delay="2">
+            <div class="card-img"><img src="https://picsum.photos/seed/luminal-web/800/600" alt="Luminal Website" loading="lazy" width="800" height="600" /></div>
+            <div class="card-overlay"><h3 class="card-title">Luminal — Website</h3><p class="card-sub">Custom coded site with GSAP animations</p></div>
+            <div class="card-view-btn" aria-hidden="true"><i class="ri-arrow-right-up-line"></i></div>
+          </a>
+          <a href="case-study/video-editing.html" class="project-card" data-reveal data-delay="3">
+            <div class="card-img"><img src="https://picsum.photos/seed/vanta-motion/800/600" alt="Vanta Edit Reel" loading="lazy" width="800" height="600" /></div>
+            <div class="card-overlay"><h3 class="card-title">Vanta — Edit Reel</h3><p class="card-sub">Long-form &amp; Reels editing package</p></div>
+            <div class="card-view-btn" aria-hidden="true"><i class="ri-arrow-right-up-line"></i></div>
+          </a>
+          <!-- Row 2 — slightly taller via CSS nth-child -->
+          <a href="case-study/branding.html" class="project-card" data-reveal>
+            <div class="card-img"><img src="https://picsum.photos/seed/mesh-co/800/600" alt="Mesh Co Identity" loading="lazy" width="800" height="600" /></div>
+            <div class="card-overlay"><h3 class="card-title">Mesh Co. — Identity</h3><p class="card-sub">Visual identity for a creative studio</p></div>
+            <div class="card-view-btn" aria-hidden="true"><i class="ri-arrow-right-up-line"></i></div>
+          </a>
+          <a href="case-study/web-development.html" class="project-card" data-reveal data-delay="2">
+            <div class="card-img"><img src="https://picsum.photos/seed/vortex-web/800/600" alt="Vortex Landing Page" loading="lazy" width="800" height="600" /></div>
+            <div class="card-overlay"><h3 class="card-title">Vortex — Landing Page</h3><p class="card-sub">Custom codebase, scroll animations</p></div>
+            <div class="card-view-btn" aria-hidden="true"><i class="ri-arrow-right-up-line"></i></div>
+          </a>
+          <a href="case-study/video-editing.html" class="project-card" data-reveal data-delay="3">
+            <div class="card-img"><img src="https://picsum.photos/seed/nova-mkt/800/600" alt="Nova Content Package" loading="lazy" width="800" height="600" /></div>
+            <div class="card-overlay"><h3 class="card-title">Nova — Content Package</h3><p class="card-sub">YouTube &amp; Reels editing series</p></div>
+            <div class="card-view-btn" aria-hidden="true"><i class="ri-arrow-right-up-line"></i></div>
+          </a>
+          <!-- Row 3 -->
+          <a href="case-study/branding.html" class="project-card" data-reveal>
+            <div class="card-img"><img src="https://picsum.photos/seed/rova-brand/800/600" alt="Rova Brand Refresh" loading="lazy" width="800" height="600" /></div>
+            <div class="card-overlay"><h3 class="card-title">Rova — Brand Refresh</h3><p class="card-sub">Identity redesign · Brand strategy</p></div>
+            <div class="card-view-btn" aria-hidden="true"><i class="ri-arrow-right-up-line"></i></div>
+          </a>
+          <a href="case-study/web-development.html" class="project-card" data-reveal data-delay="2">
+            <div class="card-img"><img src="https://picsum.photos/seed/crest-web/800/600" alt="Crest Studio Portfolio" loading="lazy" width="800" height="600" /></div>
+            <div class="card-overlay"><h3 class="card-title">Crest Studio — Portfolio</h3><p class="card-sub">Custom HTML/CSS/JS · CMS integration</p></div>
+            <div class="card-view-btn" aria-hidden="true"><i class="ri-arrow-right-up-line"></i></div>
+          </a>
+          <a href="case-study/video-editing.html" class="project-card" data-reveal data-delay="3">
+            <div class="card-img"><img src="https://picsum.photos/seed/klave-deck/800/600" alt="Klave YouTube Series" loading="lazy" width="800" height="600" /></div>
+            <div class="card-overlay"><h3 class="card-title">Klave — YouTube Series</h3><p class="card-sub">Long-form editing · Thumbnails · SEO</p></div>
+            <div class="card-view-btn" aria-hidden="true"><i class="ri-arrow-right-up-line"></i></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT STRIP ── -->
+    <section class="section" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);" aria-label="About Creativo">
+      <div class="container">
+        <div class="about-strip">
+          <div data-reveal>
+            <div class="section-label" style="margin-bottom:22px;"><span class="t-label">The Person Behind The Work</span></div>
+            <p class="about-pull-quote">I don't just design things. I build <em>visual logic</em> behind brands that mean something.</p>
+            <p class="t-body-lg" style="margin-bottom:36px;">I'm a multidisciplinary creative operating at the intersection of strategy, design, and code. Every project is an exercise in clarity: turning complex needs into experiences that feel obvious, inevitable, and alive.</p>
+            <a href="about.html" class="btn btn-outline">Meet Creativo</a>
+          </div>
+          <div class="about-visual" data-reveal="right">
+            <div class="about-badge">
+              <p class="about-badge-role">Brand Structuralist &amp; Video Editor</p>
+              <p class="about-badge-name">Creativo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SERVICES SNAP ── -->
+    <section class="section" aria-labelledby="services-snap-heading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label" data-reveal><span class="t-label">What I Do</span></div>
+          <div class="flex-between" data-reveal data-delay="2">
+            <h2 class="t-h1" id="services-snap-heading">Full-spectrum<br />creative execution.</h2>
+            <a href="services.html" class="btn-arrow">All Services <i class="ri-arrow-right-up-line"></i></a>
+          </div>
+        </div>
+        <div class="services-grid" data-reveal>
+          <div class="service-item"><span class="service-glyph" aria-hidden="true">✦</span><h3 class="service-title">Branding</h3><p class="service-desc">Visual systems that hold meaning across every touchpoint.</p><a href="services.html" class="service-cta">Explore →</a></div>
+          <div class="service-item"><span class="service-glyph" aria-hidden="true">⬡</span><h3 class="service-title">Web Development</h3><p class="service-desc">Clean code, considered motion, performance built in.</p><a href="services.html" class="service-cta">Explore →</a></div>
+          <div class="service-item"><span class="service-glyph" aria-hidden="true">▷</span><h3 class="service-title">Video Editing</h3><p class="service-desc">Edits that stop the scroll. Built for creators.</p><a href="services.html" class="service-cta">Explore →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STATS — 4 cards ── -->
+    <section class="section" aria-label="Stats">
+      <div class="container">
+        <div class="stats-bar">
+          <div class="stat-item" data-reveal data-delay="1" data-count="60"><div class="stat-number"><span class="stat-count-value">0</span><em>+</em></div><p class="stat-label">Projects Delivered</p></div>
+          <div class="stat-item" data-reveal data-delay="2" data-count="30"><div class="stat-number"><span class="stat-count-value">0</span><em>+</em></div><p class="stat-label">Brands Built</p></div>
+          <div class="stat-item" data-reveal data-delay="3" data-count="5"><div class="stat-number"><span class="stat-count-value">0</span><em>+</em></div><p class="stat-label">Years Experience</p></div>
+          <div class="stat-item" data-reveal data-delay="4" data-count="3"><div class="stat-number"><span class="stat-count-value">0</span></div><p class="stat-label">Disciplines Mastered</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA DIVIDER + BANNER ── -->
+    <div class="cta-divider" aria-hidden="true"></div>
+    <section class="cta-banner" aria-label="Call to Action">
+      <div class="container" style="position:relative;z-index:1;">
+        <div data-reveal>
+          <span class="t-label" style="display:block;margin-bottom:18px;">Let's Build Something</span>
+          <h2 class="t-hero">Have a project<br />in mind? Let's<br />make it real.</h2>
+          <div class="cta-actions">
+            <a href="contact.html" class="btn btn-primary"><span>Start a Conversation</span><i class="ri-arrow-right-line"></i></a>
+            <a href="work.html" class="btn btn-outline">View All Work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER — wordmark & location removed ── -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="footer-inner container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">Creativo<span>.</span></a>
+          <p class="footer-tagline">Brand Structuralist &amp; Video Editor</p>
+          <p class="footer-desc">Design that thinks. Work that lasts.<br />Based in Lagos, Nigeria.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/creativocreates" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer-social"><i class="ri-instagram-line"></i></a>
+            <a href="https://behance.net/creativocreates"   target="_blank" rel="noopener noreferrer" aria-label="Behance"   class="footer-social"><i class="ri-behance-line"></i></a>
+            <a href="https://pinterest.com/creativocreates" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="footer-social"><i class="ri-pinterest-line"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <nav class="footer-nav-links" aria-label="Footer navigation">
+            <a href="index.html"    class="footer-nav-link">Home     <i class="ri-arrow-right-up-line"></i></a>
+            <a href="work.html"     class="footer-nav-link">Work     <i class="ri-arrow-right-up-line"></i></a>
+            <a href="about.html"    class="footer-nav-link">About    <i class="ri-arrow-right-up-line"></i></a>
+            <a href="services.html" class="footer-nav-link">Services <i class="ri-arrow-right-up-line"></i></a>
+            <a href="contact.html"  class="footer-nav-link">Contact  <i class="ri-arrow-right-up-line"></i></a>
+          </nav>
+        </div>
+        <div class="footer-contact-col">
+          <h4 class="footer-col-title">Get In Touch</h4>
+          <a href="mailto:hello@creativocreates.live" class="footer-contact-item"><i class="ri-mail-line"></i> hello@creativocreates.live</a>
+          <a href="https://wa.me/2348000000000" target="_blank" rel="noopener noreferrer" class="footer-contact-item"><i class="ri-whatsapp-line"></i> Chat on WhatsApp</a>
+          <a href="contact.html" class="btn btn-primary footer-cta"><span>Start a Project</span><i class="ri-arrow-right-up-line"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© <span id="footerYear"></span> <span>Creativo Creates</span>. All Rights Reserved.</p>
+        <p class="footer-made">Designed &amp; Built by <em>Creativo</em></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-to-top" aria-label="Scroll to top"><i class="ri-arrow-up-line"></i></button>
+
+  <div id="showreelModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Showreel video" aria-hidden="true">
+    <div class="modal-container">
+      <button class="modal-close" id="closeShowreel" aria-label="Close showreel"><i class="ri-close-line"></i></button>
+      <div class="modal-video-wrap">
+        <iframe id="vimeoPlayer" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Creativo Showreel"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animation.js" defer></script>
+  <script>document.getElementById('footerYear').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

@@ -1,0 +1,698 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: #f7f5f2;
+  display: flex;
+  height: 100vh;
+  color: #1a1a1a;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  width: 260px;
+  background: #1a1a1a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  flex-shrink: 0;
+}
+.nav-item {
+  padding: 16px 30px;
+  cursor: pointer;
+  color: #999;
+  font-size: 14px;
+  border-left: 4px solid transparent;
+  transition: 0.2s;
+  user-select: none;
+}
+.nav-item:hover,
+.nav-item.active {
+  color: #fff;
+  background: #222;
+  border-left-color: #2060ff;
+}
+.logout {
+  margin-top: auto;
+  padding: 20px 30px;
+  color: #2060ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ── Main ── */
+.main {
+  flex: 1;
+  padding: 40px 60px 60px 60px;
+  overflow-y: auto;
+}
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+.card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  max-width: 900px;
+}
+
+/* ── Tabs ── */
+.tab {
+  display: none;
+}
+.tab.active {
+  display: block;
+}
+
+/* ── Form elements ── */
+h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+.field-group {
+  margin-bottom: 40px;
+}
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #666;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+input[type="text"]:focus {
+  outline: none;
+  border-color: #2060ff;
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 0 0 40px;
+}
+
+/* ── Buttons ── */
+.btn {
+  background: #2060ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  font-family: "Inter", sans-serif;
+  transition:
+    opacity 0.2s,
+    transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn:hover {
+  opacity: 0.88;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.btn .spinner {
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  display: none;
+}
+.btn.loading .spinner {
+  display: block;
+}
+.btn.loading .btn-label {
+  opacity: 0.7;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Preview boxes ── */
+.preview-box {
+  width: 120px;
+  height: 80px;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+}
+.preview-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.preview-box.wide {
+  width: 200px;
+  height: 120px;
+}
+.preview-box.round {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.preview-box.round img {
+  border-radius: 50%;
+}
+.preview-box.updating {
+  animation: pulse 1s ease infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ── Grid ── */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* ── Toast ── */
+#toast-container {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  pointer-events: none;
+}
+.toast {
+  min-width: 260px;
+  max-width: 380px;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 6px;
+  padding: 14px 18px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
+  pointer-events: all;
+  animation: toastIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  overflow: hidden;
+  position: relative;
+}
+.toast.success {
+  border-left: 4px solid #25c36a;
+}
+.toast.error {
+  border-left: 4px solid #2060ff;
+}
+.toast.warn {
+  border-left: 4px solid #f0a500;
+}
+.toast-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.toast-msg {
+  flex: 1;
+  line-height: 1.4;
+}
+.toast-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.25);
+  animation: toastBar 3.5s linear forwards;
+}
+.toast.success .toast-bar {
+  background: #25c36a;
+}
+.toast.error .toast-bar {
+  background: #2060ff;
+}
+.toast.warn .toast-bar {
+  background: #f0a500;
+}
+.toast.leaving {
+  animation: toastOut 0.25s ease forwards;
+}
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes toastOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 100px;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(8px);
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+  }
+}
+@keyframes toastBar {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+/* ══════════════════════════════════════════
+           RESPONSIVE STYLES
+        ══════════════════════════════════════════ */
+
+/* ── Hamburger button ── */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1100;
+  background: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  transition: background 0.2s;
+}
+.menu-toggle:hover {
+  background: #333;
+}
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+  transform-origin: center;
+}
+/* Animate hamburger → X when sidebar is open */
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Dim overlay behind sidebar on mobile */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+  backdrop-filter: blur(2px);
+}
+.sidebar-overlay.active {
+  display: block;
+}
+
+/* ── Tablet (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+  }
+  .main {
+    padding: 40px 30px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+  body {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Sidebar slides in from the left */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 260px;
+    height: 100%;
+    z-index: 1000;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding-top: 64px;
+    overflow-y: auto;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+
+  .main {
+    padding: 72px 18px 48px;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    padding: 20px 16px;
+    border-radius: 6px;
+  }
+
+  h2 {
+    font-size: 17px;
+    margin-bottom: 18px;
+  }
+
+  .field-group {
+    margin-bottom: 28px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Full-width previews on mobile so they're easier to see */
+  .preview-box {
+    width: 100%;
+    height: 120px;
+  }
+  .preview-box.wide {
+    width: 100%;
+    height: 150px;
+  }
+  .preview-box.round {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+
+  /* Prevent iOS auto-zoom on input focus */
+  input[type="text"],
+  input[type="file"] {
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+  }
+
+  /* Toast sits higher so it clears the browser nav bar */
+  #toast-container {
+    bottom: 80px;
+    right: 16px;
+    left: 16px;
+  }
+  .toast {
+    min-width: unset;
+    max-width: 100%;
+  }
+}
+/* Login Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  background: #fff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.form-side {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img-side {
+  flex: 1;
+  background: url("../assets/web/login-cover.jpg") no-repeat center center;
+  background-size: cover;
+}
+.login-page h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+.sub {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+.login-page label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.login-page input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  font-size: 15px;
+}
+.login-page input:focus {
+  border-color: #2060ff;
+}
+
+/* Password Wrapper and Eye Icon */
+.pass-wrapper {
+  position: relative;
+}
+.toggle-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+}
+.toggle-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: #333;
+  fill: none;
+  stroke-width: 2;
+}
+.toggle-btn:hover {
+  opacity: 1;
+}
+
+.login-page .btn {
+  background: #2060ff;
+  color: #fff;
+  border: none;
+  padding: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.login-page .error {
+  color: #2060ff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .img-side {
+    display: none;
+  }
+  .wrapper {
+    max-width: 450px;
+  }
+}
+
+/* Additional inline styles extracted */
+.nav-heading {
+  padding: 16px 30px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.nav-divider {
+  margin: 15px 30px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.nav-socials {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Phase 4: Sidebar Updates */
+.sidebar-wordmark {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  padding: 0 30px;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.logout {
+  margin-top: auto;
+  padding: 20px 30px;
+  color: #ff4444 !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logout svg {
+  fill: #ff4444;
+}
+
+/* Phase 5: Main Canvas Top Navbar */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+
+.top-nav-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.top-nav-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .top-navbar {
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-navbar {
+    padding: 15px 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .top-nav-title {
+    font-size: 20px;
+  }
+}
